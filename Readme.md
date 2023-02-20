@@ -31,13 +31,14 @@
 
 # Domin Model
 
-image
+![image](https://user-images.githubusercontent.com/65676107/220179111-54a32076-fd54-46e1-bd03-b8e095750e43.png)
+
 
 It is sufficient to have five main classes in our system. The Library class is the most authoritative class, which can access other classes. The Memberlist and Catalog classes act as bridges to access and act on members and books, respectively. The Transaction class, on the other hand, can record all transactions made, allowing for data retention or possibly statistical processing in the future.
 
 # Sequence Diagram
 
-image
+![image](https://user-images.githubusercontent.com/65676107/220179158-50124bfd-37a8-46e7-aed9-3f971f16b7ed.png)
 
 **Controller:** The Library class serves as a controller in the system, separating the business and user interface layers. It coordinates all system operations and can be utilized in other usage scenarios as well. The class represents the entire library system.
 **Creator:** The Member class applies the Creator pattern by creating a Transaction object when a fine is added. Since the Member class has a list of transactions to keep track of the transactions made by a member, it is appropriate for the Member class to be responsible for creating new Transaction objects
