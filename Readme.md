@@ -41,7 +41,11 @@ It is sufficient to have five main classes in our system. The Library class is t
 ![image](https://user-images.githubusercontent.com/65676107/220179158-50124bfd-37a8-46e7-aed9-3f971f16b7ed.png)
 
 **Controller:** The Library class serves as a controller in the system, separating the business and user interface layers. It coordinates all system operations and can be utilized in other usage scenarios as well. The class represents the entire library system.
+
 **Creator:** The Member class applies the Creator pattern by creating a Transaction object when a fine is added. Since the Member class has a list of transactions to keep track of the transactions made by a member, it is appropriate for the Member class to be responsible for creating new Transaction objects
+
 **Information Expert:**  The computeFine method is added to the Book class in accordance with the Information Expert pattern since the Book class has all the necessary information (such as the due date, acquisition date, and hold status) to compute the fine. This responsibility is therefore assigned to the Book class.
+
 **High Cohesion:** Assigning the responsibility of computing the fine to the Book class and the responsibility of adding the fine to the Member class supports high cohesion. By doing this, we were able to delegate the appropriate operations to related classes and increase cohesion.
+
 **Low Coupling:** The decision to assign the responsibility of computing the fine to the Book class also supports low coupling. If we had chosen a different class for this responsibility, it would create unnecessary coupling between the Book class and the other class.
